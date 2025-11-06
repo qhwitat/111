@@ -19,6 +19,7 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    background-color: #000;
   }
 
   video.bg {
@@ -49,14 +50,15 @@
   }
 
   h1 {
+    font-family: 'Courier New', monospace;
     font-size: 8vw;
     max-font-size: 48px;
-    color: red;
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
     white-space: nowrap;
     margin-bottom: 15px;
   }
 
-  /* أيقونة Instagram */
   .social-icon {
     width: 50px;
     height: 50px;
@@ -69,7 +71,6 @@
     filter: brightness(1.2);
   }
 
-  /* تجاوب الهاتف */
   @media (max-width: 600px) {
     img.profile {
       width: 60vw;
@@ -94,14 +95,13 @@
 <img src="1.png" alt="صورتي" class="profile">
 <h1 id="name"></h1>
 
-<!-- أيقونة Instagram -->
 <a href="https://instagram.com/q_8xd" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
        alt="Instagram" class="social-icon">
 </a>
 
 <script>
-  const text = "قصي الحويطي";
+  const text = "قصي الحويطات";
   const nameElement = document.getElementById('name');
   let index = 0;
 
