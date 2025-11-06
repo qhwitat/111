@@ -7,7 +7,7 @@
 <style>
   body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,16 +15,19 @@
     font-family: Arial, sans-serif;
     flex-direction: column;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   img {
-    width: 1081px;
-    height: 1081px;
-    border-radius: 50%; /* يجعل الصورة دائرية */
+    width: 50vw;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
     border: 4px solid red;
     object-fit: cover;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px red; /* glow حول الصورة */
+    box-shadow: 0 0 20px red;
     animation: glowPulse 2s infinite alternate;
   }
 
@@ -34,10 +37,11 @@
   }
 
   h1 {
-    font-size: 48px;
-    color: black;
-    opacity: 0; /* بداية الفيد ان */
-    animation: fadeIn 2s forwards; /* حركة دخول النص */
+    font-size: 8vw;
+    max-font-size: 48px;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
   }
 
   @keyframes fadeIn {
@@ -52,12 +56,12 @@
 
 <script>
   const name = document.getElementById('name');
-  const colors = ['black', 'red', 'green'];
+  const colors = ['white', 'red', 'green'];
   let i = 0;
   setInterval(() => {
     name.style.color = colors[i];
     i = (i + 1) % colors.length;
-  }, 500); // يغير اللون كل نصف ثانية
+  }, 500);
 </script>
 
 </body>
